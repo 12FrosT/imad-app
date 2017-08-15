@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles={
-    `article-one`:{
+    `article-one` : {
       title:'Article-one',
       heading:'Article one',
       content:`<p>
@@ -47,7 +47,8 @@ var articles={
                     this is other paragraph3
                 </p>`
     }
-};
+    };
+    
 app.get;('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
