@@ -82,7 +82,7 @@ return htmlTemplate;
 app.get('/:articleName',function(req, res){
     //articleName=article-one
     //article[articleName]=={}content object for article one
-    var articleNAme=req.params.articleName;
+    var articleName=req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
 
