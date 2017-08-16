@@ -6,48 +6,38 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles={
-    `article-one` : {
-      title:'Article-one',
-      heading:'Article one',
-      content:`<p>
-                    this is the content of frist article.
-                </p>
-                <p>
-                    this other paragraph2
-                </p>
-                <p>
-                    this is other paragraph3
-                </p>`
-    },
-    `article-two`:{
-        title:'Article-two',
+var articles = {
+    'article-one' :{
+        title:'article-one',
+        heading:'Article one',
+       content:
+       ` <p>
+            this is frist article
+        </p>
+            second paragraph
+         <p>
+        </p>`} ,
+    'article-two':{
+         title:'article-two',
         heading:'Article two',
-        content:`<p>
-                    this is the content of second article.
-                </p>
-                <p>
-                    this other paragraph2
-                </p>
-                <p>
-                    this is other paragraph3
-                </p>`
-        
-    },
-    `article-three`:{
-        title:'Article-three',
+       content:
+       ` <p>
+            this is second article
+        </p>
+            second paragraph
+         <p>
+        </p>`},
+    'article-three':{title:'article-three',
         heading:'Article three',
-        content:`<p>
-                    this is the content of thrid article.
-                </p>
-                <p>
-                    this other paragraph2
-                </p>
-                <p>
-                    this is other paragraph3
-                </p>`
-    }
-    };
+        content:
+       ` <p>
+            this is thrid article
+        </p>
+            second paragraph
+         <p>
+        </p>`}
+    
+};
     
 app.get;('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
