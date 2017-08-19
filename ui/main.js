@@ -8,7 +8,7 @@ var img = document.getElementById('imag');
 var marginLeft=0,a=1;
 function moveRight(){
     if(marginLeft===0)
-    {a=1;alert('yes');}
+    {a=1;}
     if(marginLeft==50)
     a=0;
     if(a===0)
