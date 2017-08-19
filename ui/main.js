@@ -21,7 +21,7 @@ img.onclick = function (){
     var interval=setInterval(moveRight,50);
 };
 var string="HOME PAGE";
-function sydtr(){
+function dystr(){
     var s;
     for(var i=0;i<=9;i=i+1){
         s=s+string[i];
