@@ -5,8 +5,8 @@ var element = document.getElementById('main-text');
 element.innerHTML="new text";
 
 var img = document.getElementById('imag');
+var marginLeft=0;
 function moveRight(){
-    var marginLeft=0;
     marginLeft=marginLeft + 1;
     img.style.marginLeft=marginLeft +'px';
 }
