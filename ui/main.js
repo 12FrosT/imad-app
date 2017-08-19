@@ -4,5 +4,7 @@ console.log('Loaded!');
 var element = document.getElementById('main-text');
 element.innerHTML="new text";
 
-var element = document.getElementById('imag');
-element.style.marginLeft='100px';
+var img = document.getElementById('imag');
+img.onclick = fuction (){
+    img.style.marginLeft='100px';
+}
