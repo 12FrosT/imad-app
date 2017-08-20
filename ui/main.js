@@ -29,7 +29,7 @@ button.onclick=function(){
             }
         }
     };
-    reuqest.open(GET,'http://ashishchauhan1206.imad.hasura-app.io/counter',true);
+    reuqest.open('GET','http://ashishchauhan1206.imad.hasura-app.io/counter',true);
     request.send(null);
     
 };
