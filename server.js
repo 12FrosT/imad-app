@@ -13,7 +13,7 @@ app.get('/counter', function (req, res) {
 
 var articles = {
     'article-one' : {
-      title:'Article-one',
+      title:`Article-one`,
       heading:'Article one',
       content:`<p>
                     this is the content of frist article.
@@ -26,7 +26,7 @@ var articles = {
                 </p>`
     },
     'article-two':{
-        title:'Article-two',
+        title:`Article-two`,
         heading:'Article two',
         content:`<p>
                     this is the content of second article.
@@ -40,7 +40,7 @@ var articles = {
         
     },
     'article-three':{
-        title:'Article-three',
+        title:`Article-three`,
         heading:'Article three',
         content:`<p>
                     this is the content of thrid article.
