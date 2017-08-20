@@ -1,9 +1,5 @@
 console.log('Loaded!');
 
-
-var element = document.getElementById('main-text');
-element.innerHTML="new text";
-
 var img = document.getElementById('imag');
 var marginLeft=0,a=1;
 function moveRight(){
