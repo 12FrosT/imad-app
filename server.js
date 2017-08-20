@@ -54,13 +54,13 @@ app.get('/', function (req, res) {
 });
 
 function createTemplate(data){
-    var title=data.title;
+    var Title=data.title;
     var heading=data.heading;
     var content=data.content;
 var htmlTemplate=`
     <html>
     <head>
-        <title>${title}</title>
+        <title>${Title}</title>
         <meta name="viewpoint" content="with device-width, inital scale=1"/>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
