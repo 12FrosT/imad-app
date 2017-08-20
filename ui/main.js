@@ -21,7 +21,7 @@ var button=document.getElementById('counter');
 button.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
-        if(reques.readystate===XMLHttpRequest.done){
+        if(request.readystate===XMLHttpRequest.done){
             
             if(request.status===200){
                 var span=document.getElementById('count');
@@ -29,7 +29,7 @@ button.onclick=function(){
             }
         }
     };
-    reuqest.open('GET','http://ashishchauhan1206.imad.hasura-app.io/counter',true);
+    request.open('GET','http://ashishchauhan1206.imad.hasura-app.io/counter',true);
     request.send(null);
     
 };
