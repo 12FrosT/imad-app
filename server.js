@@ -48,15 +48,11 @@ var articles = {
                 </p>`
     }
     };
-    
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
 
 function createTemplate(data){
     var Title=data.title;
-    var heading=data.heading;
-    var content=data.content;
+    var Heading=data.heading;
+    var Content=data.content;
 var htmlTemplate=`
     <html>
     <head>
@@ -70,9 +66,9 @@ var htmlTemplate=`
             <a href ="/">Home</a>
         </div>
         <hr>
-        <h3>${heading} </h3>
+        <h3>${Heading} </h3>
         <div>
-        ${content}
+        ${Content}
         </div>
     </body>
 </html>
@@ -91,6 +87,9 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
