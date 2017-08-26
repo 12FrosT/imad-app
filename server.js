@@ -34,48 +34,6 @@ app.get('/submit-name',function(req,res){
     names.push(name);
     res.send(JSON.stringify(names));
 });
-var articles = {
-    'article-one' : {
-      title:`Article-one`,
-      heading:'Article one',
-      content:`<p>
-                    this is the content of frist article.
-                </p>
-                <p>
-                    this other paragraph2
-                </p>
-                <p>
-                    this is other paragraph3
-                </p>`
-    },
-    'article-two':{
-        title:`Article-two`,
-        heading:'Article two',
-        content:`<p>
-                    this is the content of second article.
-                </p>
-                <p>
-                    this other paragraph2
-                </p>
-                <p>
-                    this is other paragraph3
-                </p>`
-        
-    },
-    'article-three':{
-        title:`Article-three`,
-        heading:'Article three',
-        content:`<p>
-                    this is the content of thrid article.
-                </p>
-                <p>
-                    this other paragraph2
-                </p>
-                <p>
-                    this is other paragraph3
-                </p>`
-    }
-    };
 
 function createTemplate(data){
     var Title=data.title;
