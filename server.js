@@ -70,7 +70,7 @@ function hash(input,salt){
 
 app.get('/hash/:input',function(req,res){
    var hashedstring=hash(req.params.input,'this-is-random');
-   res.send(hashedsring);
+   res.send(hashedstring);
 });
 
 app.post('/signup',function(req,res){
