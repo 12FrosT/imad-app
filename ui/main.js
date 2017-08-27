@@ -57,9 +57,23 @@ submit.onclick=function(){
     };
     request.open('GET','http://ashishchauhan1206.imad.hasura-app.io/submit-name?name='+name,true);
     request.send(null);
-    
+};
+
+var b_signup=document.getElementById('s_username');
+b_signup.onclick=function(){
+  var username=document.getElementById('s_username').value;
+  var password=document.getElementById('s_password').value;
+  
     
 };
+
+
+
+
+
+
+
+
 
 
 
