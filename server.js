@@ -102,7 +102,7 @@ app.post('/login',function(req,res){
            var salt=dbstring.split('$')[2];
            var hashedpassword=hash(password,salt);
            if(hashedpassword===dbstring)
-           alert('logged in');
+           res.send("logged in");
            else
             res.send(403).send("username/password is invalid");
        } 
