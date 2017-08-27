@@ -66,10 +66,10 @@ b_signup.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readystate===XMLHttpRequest.done){
-            
             if(request.status===200)
                 alert('user created');
             else
+            if(request.status===500)
                 alert('something went wrong');
         }
     };
