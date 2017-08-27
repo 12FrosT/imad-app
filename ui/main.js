@@ -61,10 +61,11 @@ submit.onclick=function(){
 
 var b_signup=document.getElementById('s_username');
 b_signup.onclick=function(){
-  var username=document.getElementById('s_username').value;
-  var password=document.getElementById('s_password').value;
+    var username=document.getElementById('s_username').value;
+    var password=document.getElementById('s_password').value;
   
-    
+    request.open('PST','http://ashishchauhan1206.imad.hasura-app.io/signup',true);
+    request.send(JSON.stringify({username: username,password: password}));
 };
 
 
