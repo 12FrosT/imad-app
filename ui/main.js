@@ -78,7 +78,7 @@ b_signup.onclick=function(){
     request.send(JSON.stringify({username: username,password: password}));
 };
 
-var b_login=document.getElementById('loginpb');
+var b_login=document.getElementById('loginb');
 b_login.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
