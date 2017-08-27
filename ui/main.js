@@ -84,7 +84,7 @@ b_login.onclick=function(){
     request.onreadystatechange=function(){
         if(request.readystate===XMLHttpRequest.done){
             if(request.status===200)
-                alert('user created');
+                alert('logged in');
             else
             if(request.status===403)
             alert('wrong username/password');
