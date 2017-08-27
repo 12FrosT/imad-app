@@ -78,6 +78,27 @@ b_signup.onclick=function(){
     request.send(JSON.stringify({username: username,password: password}));
 };
 
+var b_login=document.getElementById('loginpb');
+b_login.onclick=function(){
+    var request=new XMLHttpRequest();
+    request.onreadystatechange=function(){
+        if(request.readystate===XMLHttpRequest.done){
+            if(request.status===200)
+                alert('user created');
+            else
+            if(request.status===403)
+            alert('wrong username/password');
+            if(request.status===500)
+                alert('something went wrong');
+        }
+    };
+    var username=document.getElementById('username').value;
+    var password=document.getElementById('password').value;
+    request.open('POST','http://ashishchauhan1206.imad.hasura-app.io/login',true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username: username,password: password}));
+};
+
 
 
 
