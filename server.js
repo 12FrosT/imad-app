@@ -61,6 +61,21 @@ var htmlTemplate=`
 `;
 return htmlTemplate;
 }
+
+function hash(input,salt){
+    var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+    return hashed.toString('hex');
+}
+
+app.get('/hash/:input',function(req,res){
+   var hashedstring=hash(req.params.input,'this-is-random');
+   res.send(hashedsring);
+});
+
+app.post('/signup',function(req,res){
+    
+});
+
 app.get('/articles/:articleName',function(req, res){
     //articleName=article-one
     //article[articleName]=={}content object for article one
