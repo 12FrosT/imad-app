@@ -61,8 +61,6 @@ submit.onclick=function(){
 
 var b_signup=document.getElementById('signupb');
 b_signup.onclick=function(){
-    var username=document.getElementById('s_username').value;
-    var password=document.getElementById('s_password').value;
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readystate===XMLHttpRequest.done){
@@ -73,7 +71,9 @@ b_signup.onclick=function(){
                 alert('something went wrong');
         }
     };
-    request.open('PST','http://ashishchauhan1206.imad.hasura-app.io/signup',true);
+    var username=document.getElementById('s_username').value;
+    var password=document.getElementById('s_password').value;
+    request.open('POST','http://ashishchauhan1206.imad.hasura-app.io/signup',true);
     request.setRequestHeader('content-type','application/json');
     request.send(JSON.stringify({username: username,password: password}));
 };
