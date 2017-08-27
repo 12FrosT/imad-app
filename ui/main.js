@@ -59,7 +59,7 @@ submit.onclick=function(){
     request.send(null);
 };
 
-var b_signup=document.getElementById('s_username');
+var b_signup=document.getElementById('signupb');
 b_signup.onclick=function(){
     var username=document.getElementById('s_username').value;
     var password=document.getElementById('s_password').value;
