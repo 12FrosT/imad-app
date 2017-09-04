@@ -94,6 +94,7 @@ b_login.onclick=function(){
             else
             if(request.status===403)
             alert('wrong username/password');
+            else
             if(request.status===500)
                 alert('something went wrong');
         }
