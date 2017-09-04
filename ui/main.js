@@ -83,8 +83,11 @@ b_login.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
         if(request.readystate===XMLHttpRequest.done){
-            if(request.status===200)
+            if(request.status===200){
                 alert('logged in');
+                request.open('GET','http://ashishchauhan1206.imad.hasura-app.io/holder/'+username,true);
+                request.send(null);
+            }
             else
             if(request.status===403)
             alert('wrong username/password');
