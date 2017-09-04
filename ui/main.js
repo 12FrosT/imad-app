@@ -78,6 +78,10 @@ b_signup.onclick=function(){
     request.send(JSON.stringify({username: username,password: password}));
 };
 
+function log(){
+    request.open('GET','http://ashishchauhan1206.imad.hasura-app.io/holder/'+username,true);
+    request.send(null);
+}
 var b_login=document.getElementById('loginb');
 b_login.onclick=function(){
     var request=new XMLHttpRequest();
@@ -85,8 +89,7 @@ b_login.onclick=function(){
         if(request.readystate===XMLHttpRequest.done){
             if(request.status===200){
                 alert('logged in');
-                request.open('GET','http://ashishchauhan1206.imad.hasura-app.io/holder/'+username,true);
-                request.send(null);
+                log();
             }
             else
             if(request.status===403)
