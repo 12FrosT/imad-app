@@ -89,7 +89,7 @@ b_login.onclick=function(){
         if(request.readystate===XMLHttpRequest.done){
             if(request.status===200){
                 alert('logged in');
-                log();
+                //log();
             }
             else
             if(request.status===403)
