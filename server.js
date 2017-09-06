@@ -70,10 +70,10 @@ function hash(input,salt){
     return ["pbkdf2Sync","10000",salt,hashed.toString('hex')].join('$');
 }
 
-app.get('/hash/:input',function(req,res){
+/*app.get('/hash/:input',function(req,res){
    var hashedstring=hash(req.params.input,'this-is-random');
    res.send(hashedstring);
-});
+});*/
 
 app.post('/signup',function(req,res){
     var username=req.body.username;
