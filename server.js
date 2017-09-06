@@ -109,7 +109,7 @@ app.post('/login',function(req,res){
     });
 });
 
-app.get('/articles/:articleName',function(req, res){
+app.get('/:articleName',function(req, res){
     //articleName=article-one
     //article[articleName]=={}content object for article one
     pool.query("SELECT * FROM article WHERE title =$1", [req.params.articleName],function(err,result){
