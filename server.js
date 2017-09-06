@@ -150,7 +150,7 @@ var htmlTemplate=`
 return htmlTemplate;
 }
 
-app.get('/holder/:username', function (req, res) {
+/*app.get('/holder/:username', function (req, res) {
       pool.query('SELECT * FROM "user" WHERE username =$1', [req.params.username],function(err,result){
         if(err)
             res.status(500).send(err.toString());
@@ -162,7 +162,7 @@ app.get('/holder/:username', function (req, res) {
             res.send(createTemplate(userData));
         }
     });
-});
+});*/
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
