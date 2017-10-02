@@ -86,7 +86,7 @@ var b_login=document.getElementById('loginb');
 b_login.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
-        if(request.readyState==4){
+        if(request.readystate===XMLHttpRequest.done){
             if(request.status===200){
                 alert('logged in');
                 //log();
